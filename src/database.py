@@ -15,6 +15,7 @@ def get_connection() -> MySQLConnection:
         user=os.environ["MYSQL_USER"],
         password=os.environ["MYSQL_PASSWORD"],
         database=os.environ["MYSQL_DATABASE"],
+        port=os.environ["MYSQL_PORT"]
     )
 
 
@@ -25,6 +26,7 @@ def get_connection_pool(pool_size: int | None = None) -> MySQLConnectionPool:
         "user": os.environ["MYSQL_USER"],
         "password": os.environ["MYSQL_PASSWORD"],
         "database": os.environ["MYSQL_DATABASE"],
+        "port":os.environ["MYSQL_PORT"]
     }
 
     # Create a connection pool with 5 connections
